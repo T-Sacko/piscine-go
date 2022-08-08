@@ -1,1 +1,1 @@
-echo "Hello tsacko!"bash
+echo "Hello tsacko!"
