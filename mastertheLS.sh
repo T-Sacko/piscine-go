@@ -1,1 +1,1 @@
- ls -t -F| tr '\n' ','
+ ls -m -p -t --ignore='.??*' | tr -d '[:blank:]'
