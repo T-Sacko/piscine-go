@@ -1,0 +1,71 @@
+// You can edit this code!
+// Click here and s
+
+// You can edit this code!
+// Click here and start typing.
+package main
+
+import (
+	"github.com/01-edu/z01"
+)
+
+func QuadA(x int, y int) {
+
+	if x >= 1 && y >= 1 {
+		z01.PrintRune('/')
+
+		if y > x {
+			z01.PrintRune('\n')
+		}
+
+	}
+
+	for dash := x - 2; dash > 0; dash-- {
+
+		z01.PrintRune('*')
+
+		if dash == 1 && y >= 1 {
+
+			z01.PrintRune('\\')
+			z01.PrintRune('\n')
+		}
+	}
+
+	if y > 1 {
+		for r := 1; r < y-1; r++ {
+			z01.PrintRune('*')
+
+			for space := x - 2; space > 0; space-- {
+				z01.PrintRune(' ')
+				if space == 1 && y > 1 {
+					z01.PrintRune('*')
+					z01.PrintRune('\n')
+				}
+
+			}
+
+		}
+
+	}
+
+	if x >= 1 && y > 1 {
+		z01.PrintRune('\\')
+
+		for dash := x - 2; dash > 0; dash-- {
+
+			z01.PrintRune('*')
+
+			if dash == 1 && y > 1 {
+				z01.PrintRune('/')
+				z01.PrintRune('\n')
+
+			}
+		}
+	}
+}
+
+func main() {
+
+	QuadA(5, 3)
+
+}
