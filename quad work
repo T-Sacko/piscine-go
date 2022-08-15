@@ -1,0 +1,97 @@
+// You can edit this code!
+// Click here and start typing.
+package main
+
+import (
+	"github.com/01-edu/z01"
+)
+
+func QuadA(x int, y int) {
+	if x >= 1 && y >= 1 {
+		z01.PrintRune('o')
+	}
+
+	if x == 2 && y == 2 {
+
+		z01.PrintRune('o')
+		z01.PrintRune('\n')
+		z01.PrintRune('o')
+		z01.PrintRune('o')
+
+	}
+
+	if y > 2 && x == 1 {
+		for vert := y - 2; vert > 0; vert-- {
+			z01.PrintRune('\n')
+			z01.PrintRune('|')
+			if vert == 1 {
+				z01.PrintRune('\n')
+				z01.PrintRune('o')
+
+			}
+		}
+	}
+
+	for dash := x - 2; dash > 0; dash-- {
+
+		z01.PrintRune('-')
+
+		if dash == 1 && y >= 1 {
+
+			z01.PrintRune('o')
+			z01.PrintRune('\n')
+
+		}
+
+	}
+	if y > 2 && x > 1 {
+		z01.PrintRune('|')
+	}
+
+	for pipe := y - 2; pipe > 1; pipe-- {
+
+		for space := x - 2; space > 0; space-- {
+			z01.PrintRune(' ')
+
+			if space == 1 && y > 2 {
+
+				z01.PrintRune('|')
+				z01.PrintRune('\n')
+				z01.PrintRune('|')
+
+			}
+
+		}
+	}
+	if y > 2 && x > 1 {
+		for space := x - 2; space > 0; space-- {
+			z01.PrintRune(' ')
+			if space == 1 {
+				z01.PrintRune('|')
+				z01.PrintRune('\n')
+				if space == 1 && y > 1 {
+					z01.PrintRune('o')
+				}
+			}
+		}
+	}
+	if y > 2 && x > 1 {
+
+		for dash := x - 2; dash > 0; dash-- {
+
+			z01.PrintRune('-')
+
+			if dash == 1 && y > 2 {
+
+				z01.PrintRune('o')
+
+			}
+		}
+	}
+}
+
+func main() {
+
+	QuadA(5, 3)
+
+}
