@@ -7,7 +7,7 @@ func IterativeFactorial(index int) int {
 	if index < 0 {
 		return 0
 	}
-	}
+
 	if index > 27 {
 		return 0
 	}
