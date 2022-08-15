@@ -1,6 +1,6 @@
 package piscine
 
-func RecursivePower(nb int, power int) int {
+func IterativePower(nb int, power int) int {
 	if power < 0 {
 		return 0
 	}
