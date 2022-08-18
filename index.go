@@ -1,13 +1,20 @@
 package piscine
 
-func Index(s string, toFind string) int {
+func Index(s string, sb string) int {
 	mr := []rune(s)
-	sbs := []rune(toFind)
+	sbs := []rune(sb)
 
-	for i := 0; i < len(mr); i++ {
-		if mr[i] == sbs[0] {
-			return i
+	for i := 0; i < len(s); i++ {
+		  flag := true
+			for j := 0; j < len(sb); j++ {
+				index := i + j
+				if index<len(s){
+					if mr[index] != sbs[j]{
+						flag = false
+					}
+				}
+				
+				
+			}
+	if flag {return i}
 		}
-	}
-	return -1
-}
