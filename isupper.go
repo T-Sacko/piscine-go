@@ -5,8 +5,8 @@ func IsUpper(s string) bool {
 
 	for _, bit := range str {
 		if bit >= 65 || bit <= 90 {
-			return true
+			return false
 		}
 	}
-	return false
+	return true
 }
