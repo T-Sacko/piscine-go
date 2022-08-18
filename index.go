@@ -6,8 +6,10 @@ func Index(s string, toFind string) int {
 
 	for i := 0; i < len(mr); i++ {
 		if mr[i] == sbs[0] {
-			i = i + len(mr)
 			return i
+		}
+		if mr[i] == sbs[0] {
+			i = i + len(mr)
 		}
 	}
 	return -1
