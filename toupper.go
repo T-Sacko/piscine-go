@@ -5,8 +5,8 @@ func ToUpper(s string) string {
 
 	for Index, bit := range STB {
 		if bit >= 97 && bit <= 122 {
-			Upperbit := int(bit) - 32
-			STB[Index] = byte(Upperbit)
+			Upperbit := bit - 32
+			STB[Index] = Upperbit
 		}
 	}
 	return string(STB)
