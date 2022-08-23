@@ -22,8 +22,8 @@ func main() {
 	lengthOfArg := len(arguments) + 1
 
 	if isEven(lengthOfArg) {
-		printStr("even thing")
+		printStr("I have an even number of arguments")
 	} else {
-		printStr("odd thing")
+		printStr("I have an odd number of arguments")
 	}
 }
