@@ -42,7 +42,7 @@ func checking(r int) {
 	for i := 1; i <= r%10; i++ {
 		c++
 	}
-	for i := 1; i >= r%10; i-- {
+	for i := -1; i >= r%10; i-- {
 		c++
 	}
 	if r/10 != 0 {
