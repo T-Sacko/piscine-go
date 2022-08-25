@@ -1,4 +1,4 @@
-package piscine
+package main
 
 import (
 	"os"
@@ -7,9 +7,9 @@ import (
 )
 
 func main() {
-	arg := os.Args
-	for _, w := range arg[0] {
-		z01.PrintRune(w)
+	arguments := []rune(os.Args[0])
+	for _, char := range string(arguments) {
+		z01.PrintRune(char)
 	}
 	z01.PrintRune('\n')
 }
