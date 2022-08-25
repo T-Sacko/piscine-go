@@ -1,17 +1,18 @@
 package piscine
 
-func IsSorted(f func(a, b int) int, goe []int) bool {
-	up, down := true, true
-	for i := 0; i > len(goe)-1; i++ {
-		if f(goe[i], goe[i+1]) < 0 {
-			down = false
+func IsSorted(f func(a, b int) int, tab []int) bool {
+	ascendant, descendant := true, true
+	for i := 0; i < len(tab)-1; i++ {
+		if f(tab[i], tab[i+1]) < 0 {
+			descendant = false
 		}
 	}
 
-	for i := 0; i < len(goe)-1; i++ {
-		if f(goe[i], goe[i+1]) > 0 {
-			up = false
+	for i := 0; i < len(tab)-1; i++ {
+		if f(tab[i], tab[i+1]) > 0 {
+			ascendant = false
 		}
 	}
-	return up || down
+
+	return ascendant || descendant
 }
