@@ -19,7 +19,7 @@ func Capitalize(s string) string {
 			}
 
 		} else {
-			if str[i] >= 'a' && str[i] <= 'z' {
+			if str[i] >= 'a' && str[i] <= 'z' && pe == ' ' {
 				str[i] -= 32
 			}
 
