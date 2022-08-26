@@ -1,5 +1,3 @@
-// You can edit this code!
-// Click here and start typing.
 package piscine
 
 func Capitalize(s string) string {
